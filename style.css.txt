@@ -1,0 +1,181 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  color: #00ffcc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  gap: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px #00ffcc;
+}
+
+nav a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #0099cc;
+  color: #121212;
+}
+
+/* ===== Container ===== */
+.container {
+  background: rgba(0, 0, 0, 0.85);
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffcc;
+  flex-grow: 1;
+  color: #00ffcc;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+/* ===== Paragraphs & Lists ===== */
+p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== Buttons / Links ===== */
+a.btn {
+  background-color: #00ccff;
+  color: #121212;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #0099cc;
+  color: #fff;
+}
+
+/* ===== Sections ===== */
+section {
+  margin-top: 40px;
+}
+
+/* ===== Review Stars ===== */
+.stars {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 2em;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.star.selected,
+.star.hovered {
+  color: #00ccff;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ===== Submit Button ===== */
+button.submit-btn {
+  background-color: #00ccff;
+  color: #121212;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+  background-color: #0099cc;
+  color: #fff;
+}
+
+/* ===== Reviews List ===== */
+.reviews-list {
+  margin-top: 25px;
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid #00ccff;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.review-item {
+  border-bottom: 1px solid #00ccff;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+.review-stars {
+  color: #00ccff;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+
+.review-author {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #00ffff;
+}

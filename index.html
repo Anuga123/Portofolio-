@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DEV ANUWH - Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      color: #00ffcc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px #00ffcc;
+    }
+    nav a {
+      color: #00ccff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover, nav a.active {
+      background-color: #0099cc;
+color: #121212;
+    }
+    .container {
+      background: rgba(0,0,0,0.85);
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffcc;
+      flex-grow: 1;
+      color: #00ffcc;
+    }
+    h1, h2, h3 {
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin: 15px 0;
+    }
+    a.btn {
+      background-color: #00ccff;
+      color: #121212;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 6px;
+      display: inline-block;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    a.btn:hover {
+      background-color: #0099cc;
+      color: #fff;
+    }
+    section {
+      margin-top: 40px;
+    }
+    /* Review Stars */
+    .stars {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .star {
+      font-size: 2em;
+      color: #444;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      user-select: none;
+    }
+    .star.selected, .star.hovered {
+      color: #00ccff;
+    }
+    /* Inputs */
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+margin-bottom: 12px;
+      font-family: 'Arial', sans-serif;
+      font-size: 1em;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    button.submit-btn {
+      background-color: #00ccff;
+      color: #121212;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button.submit-btn:hover {
+      background-color: #0099cc;
+      color: #fff;
+    }
+    .reviews-list {
+      margin-top: 25px;
+      max-height: 250px;
+      overflow-y: auto;
+      border-top: 1px solid #00ccff;
+      padding-top: 15px;
+      text-align: left;
+    }
+    .review-item {
+      border-bottom: 1px solid #00ccff;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+    }
+    .review-stars {
+      color: #00ccff;
+      font-size: 1.2em;
+      margin-bottom: 6px;
+    }
+    .review-author {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about" class="active">About</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#review">Review Us</a>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h1>DEV ANUWH</h1>
+      <h2>(Anuga Senithu)</h2>
+<h3>Founder & Leader - EMPIRE OF HACKERS</h3>
+      <p>
+        I am DEV ANUWH, a developer specializing in HTML and JavaScript, an ethical hacker,
+        and the leader and owner of the team <strong>EMPIRE OF HACKERS</strong>. I blend coding expertise with cybersecurity skills to lead my team to success.
+      </p>
+      <p><strong>What I Can Do:</strong></p>
+      <ul>
+        <li>✅ Developer (HTML / JavaScript)</li>
+        <li>✅ Ethical Hacker</li>
+        <li>✅ Leader & Owner of Team EMPIRE OF HACKERS</li>
+      </ul>
+      <p><strong>My WhatsApp Channels:</strong></p>
+      <a href="https://whatsapp.com/channel/0029Vb6XqPl7tkjFYNxlp401" target="_blank" class="btn">WhatsApp Channel 01</a><br />
+      <a href="https://whatsapp.com/channel/0029VbABxI3Gk1Fzt6eY8A0K" target="_blank" class="btn">WhatsApp Channel 02</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>WhatsApp: <a href="https://wa.me/94710695082" target="_blank">+94 71 069 5082</a></p>
+      <p>Email: <a href="mailto:anuga.senithu2013official@gmail.com">anuga.senithu2013official@gmail.com</a></p>
+    </section>
+
+    <section id="review">
+      <h2>Review Us</h2>
+      <input type="text" id="reviewer-name" placeholder="Your Name" />
+<div class="stars" aria-label="Star rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <textarea id="review-text" placeholder="Write your review here..."></textarea>
+      <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+
+      <div class="reviews-list" id="reviews-list">
+        <!-- Reviews will appear here -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll('.star');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        highlightStars(star.dataset.value);
+      });
+      star.addEventListener('mouseout', () => {
+        highlightStars(selectedRating);
+      });
+      star.addEventListener('click', () => {
+        selectedRating = star.dataset.value;
+        highlightStars(selectedRating);
+      });
+    });
+
+    function highlightStars(rating) {
+      stars.forEach(star => {
+        if (star.dataset.value <= rating) {
+          star.classList.add('selected');
+        } else {
+star.classList.remove('selected');
+        }
+      });
+    }
+
+    function submitReview() {
+      const name = document.getElementById('reviewer-name').value.trim();
+      const text = document.getElementById('review-text').value.trim();
+
+      if (!name) {
+        alert('Please enter your name.');
+        return;
+      }
+      if (selectedRating === 0) {
+        alert('Please select a star rating.');
+        return;
+      }
+      if (text === '') {
+        alert('Please write a review.');
+        return;
+      }
+      addReview(name, selectedRating, text);
+      document.getElementById('reviewer-name').value = '';
+      document.getElementById('review-text').value = '';
+      selectedRating = 0;
+      highlightStars(0);
+    }
+
+    function addReview(name, rating, text) {
+      const reviewsList = document.getElementById('reviews-list');
+      const reviewDiv = document.createElement('div');
+      reviewDiv.className = 'review-item';
+
+      let starsHtml = '';
+      for (let i = 0; i < rating; i++) starsHtml += '&#9733; ';
+      for (let i = rating; i < 5; i++) starsHtml += '&#9734; ';
+
+      reviewDiv.innerHTML = `
+        <div class="review-author">escapeHtml(name)</div>
+        <div class="review-stars">{starsHtml}</div>
+<div class="review-text">${escapeHtml(text)}</div>
+      `;
+      reviewsList.prepend(reviewDiv);
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.innerText = text;
+      return div.innerHTML;
+    }
+
+    // Menu active link highlight on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+<script type='text/javascript' src='//pl26635370.profitableratecpm.com/0d/d6/68/0dd66892ae1350e1c2ac63bd9e54e111.js'></script></body>
+</html>
+
